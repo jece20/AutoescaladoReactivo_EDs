@@ -149,7 +149,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visibl
 .scenario-picker { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 17px; }
 .scenario-option { min-width: 0; min-height: 78px; padding: 13px 15px; display: flex; align-items: center; gap: 12px; text-align: left; border: 1px solid #e1e8ed; border-radius: 11px; background: #fff; cursor: pointer; transition: border-color .2s, box-shadow .2s, transform .2s; }
 .scenario-option:hover { transform: translateY(-1px); border-color: #b9d1d9; }
-.scenario-selected { box-shadow: 0 0 0 2px #087c831c; border-color: #138b8b; }
+.scenario-selected { border-color: #25b8c2; box-shadow: 0 0 0 1px #25b8c244, 0 0 13px #25b8c226; }
 .scenario-letter { width: 30px; height: 30px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 9px; color: #217f83; background: #e9f7f5; font-family: "Fira Code", monospace; font-size: 12px; font-weight: 600; }
 .scenario-coral .scenario-letter { color: #c05a5d; background: #fff0ef; }.scenario-blue .scenario-letter { color: #4e6ed2; background: #eff2ff; }
 .scenario-text { min-width: 0; display: grid; gap: 5px; }

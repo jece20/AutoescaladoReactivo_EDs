@@ -331,8 +331,8 @@ function RateChart({
 }
 
 export function ExpositorySimulator() {
-  const [scenarioId, setScenarioId] = useState<ScenarioId>('C');
-  const [config, setConfig] = useState<SimulationConfig>({ ...DEFAULT_SCENARIOS.C.config });
+  const [scenarioId, setScenarioId] = useState<ScenarioId | null>(null);
+  const [config, setConfig] = useState<SimulationConfig>({ ...DEFAULT_SCENARIOS.A.config });
   const [isPlaying, setIsPlaying] = useState(false);
   const [playbackSpeed, setPlaybackSpeed] = useState(1);
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
@@ -407,7 +407,7 @@ export function ExpositorySimulator() {
     setCurrentStepIndex(0);
   };
 
-  const scenario = scenarioCopy[scenarioId];
+  const scenario = scenarioCopy[scenarioId ?? 'A'];
   const displayedQueue = Math.round(currentStep.Q).toLocaleString('es');
   const waitingTime = currentStep.Wq.toFixed(1);
   const queueTrend = currentStep.Q < 1 ? 'Sin solicitudes en espera' : currentStep.dQdt > 0 ? 'La fila está creciendo' : currentStep.dQdt < 0 ? 'La fila se está vaciando' : 'La fila se mantiene';
